@@ -1,6 +1,6 @@
 # Fast Streaming Chat
 
-This project uses Next.js for the frontend and FastAPI for the backend with a streaming response system.
+This project uses Next.js for the frontend and FastAPI for the backend (located in the api folder in the root directory).
 
 ## Installation and Setup
 
@@ -61,21 +61,15 @@ This will start both the Next.js frontend and FastAPI backend concurrently.
 
 This project requires a split deployment approach:
 
+### Backend Deployment
+
+1. Deploy the FastAPI backend to a Python-friendly service like Render or Railway
+2. Use these settings:
+   - Build command: `pip install -r requirements.txt`
+   - Start command: `uvicorn api.index:app --host 0.0.0.0 --port $PORT`
+
 ### Frontend Deployment (Vercel)
 1. Deploy the Next.js frontend to Vercel
 2. Set environment variables on Vercel:
    - `NEXT_PUBLIC_API_URL`: URL to your backend API
 
-### Backend Deployment (Render/Railway/etc.)
-The backend cannot be deployed to Vercel due to size limitations with the ML models. Instead:
-
-1. Deploy the FastAPI backend to a service like Render or Railway
-2. Use these settings:
-   - Build command: `pip install -r requirements.txt`
-   - Start command: `uvicorn api.index:app --host 0.0.0.0 --port $PORT`
-   - Make sure your `Questions.json` file is included in the deployment
-
-### Connecting Frontend and Backend
-After deploying both services:
-1. Update the `NEXT_PUBLIC_API_URL` in your Vercel deployment to point to your backend URL
-2. Set CORS headers on your backend to allow requests from your frontend domain
