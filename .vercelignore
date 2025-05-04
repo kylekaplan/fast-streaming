@@ -12,7 +12,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# Removed lib/ to avoid excluding src/lib
 lib64/
 parts/
 sdist/
@@ -47,6 +47,9 @@ api/Questions.json
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Explicitly include src/lib directory
+!src/lib/
 
 # Keep essential Next.js and configuration files
 !package.json
