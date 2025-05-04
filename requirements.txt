@@ -1,0 +1,7 @@
+fastapi==0.111.1
+python-dotenv==1.0.1
+uvicorn==0.30.3
+faiss-cpu==1.11.0
+sentence-transformers==4.1.0
+numpy==2.2.5
+pydantic==2.8.2

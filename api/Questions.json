@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "question": "What is the largest lending pool on Aave?",
+    "answer": "The largest lending pool on Aave is currently WETH with over $3B in TVL."
+  },
+  {
+    "id": "2",
+    "question": "Which token has the most active borrowers?",
+    "answer": "USDC tends to have the highest borrower activity across protocols."
+  },
+  {
+    "id": "3",
+    "question": "What is Compound’s most volatile asset?",
+    "answer": "DAI has historically shown the most variability in interest rates on Compound."
+  },
+  {
+    "id": "4",
+    "question": "What chains does Aave support?",
+    "answer": "Aave supports Ethereum Arbitrum Polygon Optimism and Base."
+  },
+  {
+    "id": "5",
+    "question": "Which protocol had the most user growth last month?",
+    "answer": "Arbitrum deployments saw the fastest user growth last month."
+  },
+  {
+    "id": "6",
+    "question": "How does interest rate modeling differ between Aave and Compound?",
+    "answer": "Aave uses a dynamic interest rate curve while Compound uses a kink-based model."
+  },
+  {
+    "id": "7",
+    "question": "What is the most common collateral asset in DeFi?",
+    "answer": "ETH and WBTC are commonly used as collateral due to their high liquidity and stability."
+  },
+  {
+    "id": "8",
+    "question": "Which protocol offers the lowest borrowing rates for stablecoins?",
+    "answer": "Currently Aave on Arbitrum offers some of the lowest borrowing rates for stablecoins."
+  },
+  {
+    "id": "9",
+    "question": "How frequently do liquidation events occur on Compound?",
+    "answer": "Liquidation events on Compound occur regularly during periods of high market volatility."
+  },
+  {
+    "id": "10",
+    "question": "What is the average loan duration on Aave?",
+    "answer": "Loan durations vary but many users repay within 7 to 30 days depending on market conditions."
+  }
+]
