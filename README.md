@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fast Streaming Chat
 
-## Getting Started
+This project uses Next.js for the frontend and FastAPI for the backend with a streaming response system.
 
-First, run the development server:
+## Installation and Setup
+
+Follow these steps to set up the project locally:
+
+1. **Install Node.js dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+2. **Environment Variables**
+   - Create a new file called `.env.local` in the project root
+   - Add the following variables to this file:
+     ```
+     NEXT_PUBLIC_API_URL=http://localhost:8000
+     ```
+
+3. **Python Backend Setup**
+   - Create and activate a virtual environment
+     ```bash
+     python -m venv venv
+     
+     source venv/bin/activate
+     ```
+   - Install Python dependencies
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+## Running in Development Mode
+
+Run the development server with:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start both the Next.js frontend and FastAPI backend concurrently.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend API: [http://localhost:8000](http://localhost:8000)
+- API Documentation: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The frontend can be deployed on Vercel, and the backend can be deployed on services like Render, Railway, or other Python-friendly hosting platforms.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For the backend deployment, make sure to:
+- Set the host to `0.0.0.0` and use the provided port variable
+- Update the `NEXT_PUBLIC_API_URL` in your frontend deployment to point to your backend URL
